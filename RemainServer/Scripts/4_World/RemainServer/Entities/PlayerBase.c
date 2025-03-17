@@ -13,7 +13,7 @@ modded class PlayerBase
     protected void UpdateTimeToLive()
     {
 		NeckExplosive explosive = NeckExplosive.Cast(GetInventory().FindAttachment(InventorySlots.GetSlotIdFromString("Slot_NeckExplosive")));
-        if (DateTime.Now() >= m_TimeOfKill) {    
+        if (DateTime.Now() >= m_TimeOfKill && m_TimeOfKill != -1) {    
 			if (explosive) {
 				explosive.SetDetonationTimer(3);
 			} else {
