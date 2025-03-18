@@ -40,6 +40,37 @@ class CfgVehicles
 		hiddenSelectionsMaterials[] = {"dz\data\data\penetration\explosiontransparent.rvmat"};
 		
     };
+
+	class Inventory_Base;
+
+	class Remain_TimeCapsule_Base: Inventory_Base
+	{
+		scope = 1;
+	};
+
+	class Remain_TimeCapsule_5min: Remain_TimeCapsule_Base
+	{
+		scope=2;
+		displayName = "5 Minute Additional Time";
+		descriptionShort = "Consume for an additional 5 minutes of time on this precious rock";
+		model = "DZ\gear\consumables\BatteryD.p3d";
+	};
+
+	class Remain_TimeCapsule_15min: Remain_TimeCapsule_Base
+	{
+		scope=2;
+		displayName = "15 Minute Additional Time";
+		descriptionShort = "Consume for an additional 15 minutes of time on this precious rock";
+		model = "DZ\gear\consumables\BatteryD.p3d";
+	};
+
+	class Remain_TimeCapsule_60min: Remain_TimeCapsule_Base
+	{
+		scope=2;
+		displayName = "60 Minute Additional Time";
+		descriptionShort = "Consume for an additional 60 minutes of time on this precious rock. Score!";
+		model = "DZ\gear\consumables\BatteryD.p3d";
+	};
 };
 
 class CfgNonAIVehicles

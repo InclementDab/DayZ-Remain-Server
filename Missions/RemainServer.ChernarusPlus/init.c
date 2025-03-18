@@ -60,9 +60,9 @@ class CustomMission: MissionServer
 		float rand;
 
 		player.GetInventory().CreateInInventory("NeckExplosive");
-		
+
 		// 60 minutes to live
-		player.SetTimeToLive(DateTime.Now() + 3600);
+		player.SetTimeToLive(3600);
 
 		itemClothing = player.FindAttachmentBySlotName( "Body" );
 		if ( itemClothing )

@@ -119,16 +119,9 @@ class NeckExplosive: Clothing
 	void SetDetonationTimer(TimeSpan time)
 	{
 		m_DetonationTime = DateTime.Now() + time;
-		DumpStack();
 #ifdef SERVER
 		GetGame().GetUpdateQueue(CALL_CATEGORY_SYSTEM).Insert(OnExplosiveTimer);
 		SetSynchDirty();
-		
-		PlayerBase player_owner = PlayerBase.Cast(GetHierarchyRootPlayer());
-		if (player_owner) {
-			//player_owner.PlayerTagImageState = ePlayerTagImageState.WARNING_TOXICITY;
-			player_owner.SetSynchDirty();
-		}
 #endif
 	}
 	

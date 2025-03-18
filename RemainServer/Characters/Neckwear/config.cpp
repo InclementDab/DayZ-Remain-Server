@@ -10,6 +10,37 @@ class CfgPatches
 	};
 };
 
+class CfgSoundShaders
+{
+	class baseCharacter_SoundShader;
+	class Beep_SoundShader: baseCharacter_SoundShader
+	{
+		samples[] = {{"RemainServer\Sounds\beep", 1}};
+		volume=1.0;
+		radius = 1;
+		range = 32;
+	};
+};
+
+class CfgSoundSets
+{
+	class DaysBefore_2DSoundSetBase
+	{
+		sound3DProcessingType = "Music_Event_3DProcessingType";
+		volumeCurve = "characterAttenuationCurve";
+		spatial = 0;
+		doppler = 0;
+		loop = 0;
+	};
+	
+	class Beep_SoundSet: DaysBefore_2DSoundSetBase
+	{
+		SoundShaders[] = {"Beep_SoundShader"};
+		spatial = 1;
+		doppler = 1;
+	};
+};
+
 class CfgVehicles
 {
 	class Clothing;

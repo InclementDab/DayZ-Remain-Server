@@ -1,8 +1,32 @@
-FrameWidgetClass rootFrame {
- position 10 10
- size 100 100
+GridSpacerWidgetClass rootFrame {
+ size 100 24
+ halign center_ref
+ valign bottom_ref
  hexactpos 1
  vexactpos 1
  hexactsize 1
  vexactsize 1
+ Padding 8
+ Margin 8
+ "Size To Content H" 1
+ "Size To Content V" 1
+ Columns 1
+ Rows 1
+ {
+  TextWidgetClass TimeRemaining {
+   ignorepointer 1
+   position 10 10
+   size 48 28
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "60:00"
+   font "gui/fonts/system"
+   "size to text h" 1
+   "size to text v" 1
+   "text halign" center
+   "text valign" center
+  }
+ }
 }
